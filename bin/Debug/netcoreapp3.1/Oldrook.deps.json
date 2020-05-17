@@ -24,6 +24,11 @@
     ".NETCoreApp,Version=v3.1": {
       "Oldrook/1.0.0": {
         "dependencies": {
+          "AspNet.Security.OAuth.Instagram": "3.1.1",
+          "Microsoft.AspNetCore.Authentication.Facebook": "3.1.4",
+          "Microsoft.AspNetCore.Authentication.Google": "3.1.4",
+          "Microsoft.AspNetCore.Authentication.MicrosoftAccount": "3.1.4",
+          "Microsoft.AspNetCore.Authentication.Twitter": "3.1.4",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.0",
           "Microsoft.AspNetCore.Identity.UI": "3.1.0",
@@ -317,6 +322,61 @@
         },
         "compile": {
           "Oldrook.dll": {}
+        }
+      },
+      "AspNet.Security.OAuth.Instagram/3.1.1": {
+        "runtime": {
+          "lib/netcoreapp3.1/AspNet.Security.OAuth.Instagram.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.100.120.25854"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AspNet.Security.OAuth.Instagram.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Facebook/3.1.4": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.21604"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/3.1.4": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.21604"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Google.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.MicrosoftAccount/3.1.4": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll": {
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.21604"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Twitter/3.1.4": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Twitter.dll": {
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.21604"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Twitter.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.0": {},
@@ -2911,6 +2971,41 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AspNet.Security.OAuth.Instagram/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jgu8l5cOL78ZHWQADUOu60z8BhjLHzRDnB1bb5xO0WH+hrVq4W0HHXhIyiIM/CYINkbZdX1Lov1lMR4soozqHA==",
+      "path": "aspnet.security.oauth.instagram/3.1.1",
+      "hashPath": "aspnet.security.oauth.instagram.3.1.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Facebook/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/yHEfDA/kRxi1GwiWfjGCoba01OgEufGKjOgBQrjgZDkKUDheun54M1X8OOxXxjKGB4XIfpA8OHl+j1JVlnq5w==",
+      "path": "microsoft.aspnetcore.authentication.facebook/3.1.4",
+      "hashPath": "microsoft.aspnetcore.authentication.facebook.3.1.4.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YaSqdLcLxb7+f/5LY/r8FJCyzmGx3AmGeT3zo9/TOEp4nn3xSNoIMy2Du4dmBhmr/pM6QZOoIxVwXDOxGN2lhg==",
+      "path": "microsoft.aspnetcore.authentication.google/3.1.4",
+      "hashPath": "microsoft.aspnetcore.authentication.google.3.1.4.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.MicrosoftAccount/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/SEJlEch3+gfNGZpskVNlClcxIeBqLBKXeyfjKTZVN19xr7Un0ciaTaE//SJn2boxhXNaf9sGch3aeR326xX9w==",
+      "path": "microsoft.aspnetcore.authentication.microsoftaccount/3.1.4",
+      "hashPath": "microsoft.aspnetcore.authentication.microsoftaccount.3.1.4.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Twitter/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UsOmfexPGd4V8cZ1QXWdxIvPxjTr/SlQM2KDB+f9y0J61XnqdQOt0icMEPIXn1fEs8CpOvRe3GPCPEPGzqcskQ==",
+      "path": "microsoft.aspnetcore.authentication.twitter/3.1.4",
+      "hashPath": "microsoft.aspnetcore.authentication.twitter.3.1.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.0": {
       "type": "package",

@@ -33,7 +33,35 @@ namespace Oldrook
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
-        }
+
+            //Authentication
+            //services.AddAuthentication().AddFacebook();
+            services.AddAuthentication()
+                .AddFacebook(facebookOptions =>
+                {
+                    facebookOptions.AppId = "yyycc";
+                    facebookOptions.AppSecret = "yyyyy";
+                })
+                .AddGoogle(options =>
+                {
+                    IConfigurationSection googleAuthNSection =
+                        Configuration.GetSection("yyyxx");
+
+                    options.ClientId = "nnn";
+                    options.ClientSecret = "bbnn";
+                })
+                .AddMicrosoftAccount(microsoftOptions =>
+                {
+                    microsoftOptions.ClientId = "bbb";
+                    microsoftOptions.ClientSecret = "vv";
+                })
+                .AddTwitter(twitterOptions =>
+                {
+                    twitterOptions.ConsumerKey = "cc";
+                    twitterOptions.ConsumerSecret = "xx";
+                    twitterOptions.RetrieveUserDetails = true;
+                });
+        }   
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

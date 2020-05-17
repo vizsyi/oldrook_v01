@@ -39,8 +39,6 @@ C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\runtimes\win\lib
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.csprojAssemblyReference.cache
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\staticwebassets\Oldrook.StaticWebAssets.Manifest.cache
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\staticwebassets\Oldrook.StaticWebAssets.xml
-C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.RazorAssemblyInfo.cache
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.RazorAssemblyInfo.cs
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.AssemblyInfoInputs.cache
@@ -63,3 +61,10 @@ C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.Views.pd
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.csproj.CopyComplete
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.dll
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.pdb
+C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll
+C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll
+C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Twitter.dll
+C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\AspNet.Security.OAuth.Instagram.dll
+C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.MvcApplicationPartsAssemblyInfo.cache
