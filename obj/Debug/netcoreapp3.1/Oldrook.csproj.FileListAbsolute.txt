@@ -68,3 +68,4 @@ C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\Microsoft.AspNet
 C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\AspNet.Security.OAuth.Instagram.dll
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\libman.json

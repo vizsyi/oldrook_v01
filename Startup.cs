@@ -12,6 +12,7 @@ using Oldrook.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using LyndaSignalR.Services;
 
 namespace Oldrook
 {
@@ -32,10 +33,11 @@ namespace Oldrook
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddRazorPages();
+            services.AddSignalR();
 
             //Authentication
-            //services.AddAuthentication().AddFacebook();
             services.AddAuthentication()
                 .AddFacebook(facebookOptions =>
                 {
@@ -61,6 +63,8 @@ namespace Oldrook
                     twitterOptions.ConsumerSecret = "xx";
                     twitterOptions.RetrieveUserDetails = true;
                 });
+
+            services.AddSingleton<IChatRoomService, InMmoryChatRoomService>();
         }   
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -89,6 +93,7 @@ namespace Oldrook
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapHub<RookHub>("/rookHub");
             });
         }
     }

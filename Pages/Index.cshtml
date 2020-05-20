@@ -8,3 +8,67 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<div class="row">
+    <div>
+        <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div id="chatDialog" title="Chat with support">
+            <div id="chatWelcomePanel">
+                <h3>Who the fuck are you?</h3>
+                <form id="chatConnectForm">
+                    <input type="text" placeholder="Enter your name" />
+                    <button type="submit">Connect</button>
+                </form>
+            </div>
+            <div id="chatConnectionInfo">
+                <strong>Connecting . . .</strong>
+            </div>
+            <div id="chatMainPanel">
+                <ul id="chatHistory"></ul>
+                <div id="bottomPanel">
+                    <form id="chatForm">
+                        <input id="messageTextbox" type="text" placeholder="Type a message" />
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link href="~/lib/lynda/css/main.css" rel="stylesheet" />
+    <link href="~/lib/lynda/css/chat.css" rel="stylesheet" />
+}
+
+@section Scripts {
+    <script src="~/lib/signalr/signalr.min.js"></script>
+    <script src="~/lib/moment/moment.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+}
