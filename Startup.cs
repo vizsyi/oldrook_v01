@@ -38,29 +38,27 @@ namespace Oldrook
             services.AddSignalR();
 
             //Authentication
+            IConfigurationSection extAuthSection = Configuration.GetSection("ExternalAuth");
             services.AddAuthentication()
                 .AddFacebook(facebookOptions =>
                 {
-                    facebookOptions.AppId = "yyycc";
-                    facebookOptions.AppSecret = "yyyyy";
+                    facebookOptions.AppId = extAuthSection["FacebookId"];
+                    facebookOptions.AppSecret = extAuthSection["FacebookSec"];
                 })
                 .AddGoogle(options =>
                 {
-                    IConfigurationSection googleAuthNSection =
-                        Configuration.GetSection("yyyxx");
-
-                    options.ClientId = "nnn";
-                    options.ClientSecret = "bbnn";
+                    options.ClientId = extAuthSection["GoogleId"];
+                    options.ClientSecret = extAuthSection["GoogleSec"];
                 })
                 .AddMicrosoftAccount(microsoftOptions =>
                 {
-                    microsoftOptions.ClientId = "bbb";
-                    microsoftOptions.ClientSecret = "vv";
+                    microsoftOptions.ClientId = extAuthSection["MicrosoftId"];
+                    microsoftOptions.ClientSecret = extAuthSection["MicrosoftSec"];
                 })
                 .AddTwitter(twitterOptions =>
                 {
-                    twitterOptions.ConsumerKey = "cc";
-                    twitterOptions.ConsumerSecret = "xx";
+                    twitterOptions.ConsumerKey = extAuthSection["TwitterId"];
+                    twitterOptions.ConsumerSecret = extAuthSection["TwitterSec"];
                     twitterOptions.RetrieveUserDetails = true;
                 });
 
