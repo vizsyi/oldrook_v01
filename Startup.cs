@@ -12,18 +12,18 @@ using Oldrook.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using LyndaSignalR.Services;
+using Oldrook.Services;
 
 namespace Oldrook
 {
     public class Startup
     {
+        private readonly IConfiguration Configuration;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -62,7 +62,8 @@ namespace Oldrook
                     twitterOptions.RetrieveUserDetails = true;
                 });
 
-            services.AddSingleton<IChatRoomService, InMmoryChatRoomService>();
+            services.AddSingleton<IChatRoomService, InMemoryChatRoomService>();
+            services.AddScoped<ICelebService, CelebService>();
         }   
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

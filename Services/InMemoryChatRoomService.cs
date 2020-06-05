@@ -1,12 +1,12 @@
-﻿using LyndaSignalR.Models;
+﻿using Oldrook.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LyndaSignalR.Services
+namespace Oldrook.Services
 {
-    public class InMmoryChatRoomService : IChatRoomService
+    public class InMemoryChatRoomService : IChatRoomService
     {
         private readonly Dictionary<Guid, ChatRoom> _roomInfo
             = new Dictionary<Guid, ChatRoom>();

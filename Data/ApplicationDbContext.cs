@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Oldrook.Models;
 
 namespace Oldrook.Data
 {
@@ -12,5 +13,10 @@ namespace Oldrook.Data
             : base(options)
         {
         }
+        /// <summary>
+        /// Saját adattáblák
+        /// </summary>
+        public DbSet<Celeb> Celebs { get; set; }
+
     }
 }

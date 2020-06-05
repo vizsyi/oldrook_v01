@@ -69,3 +69,5 @@ C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\AspNet.Security.
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Celebs.cshtml.g.cs
+C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\AddEditCeleb.cshtml.g.cs

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LyndaSignalR.Services
+namespace Oldrook.Services
 {
     public interface IChatRoomService
     {
