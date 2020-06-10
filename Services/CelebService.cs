@@ -1,4 +1,6 @@
-﻿using Oldrook.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Oldrook.Data;
+using Oldrook.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,29 +10,50 @@ namespace Oldrook.Services
 {
     public class CelebService : ICelebService
     {
+        private readonly ApplicationDbContext db;
+
+        public CelebService(ApplicationDbContext context) => db = context;
+
         public Celeb Find(int id)
         {
-            throw new NotImplementedException();
+            return db.Celebs.Find(id);
         }
 
-        public Task<Celeb> FindAsync(int id)
+        public async Task<Celeb> FindAsync(int id)
         {
-            throw new NotImplementedException();
+            return await db.Celebs.FindAsync(id);
+
         }
 
         public IQueryable<Celeb> GetAll(int? count = null, int? page = null)
         {
-            throw new NotImplementedException();
+            return db.Celebs.AsQueryable();
         }
 
         public Task<Celeb[]> GetAllAsync(int? count = null, int? page = null)
         {
-            throw new NotImplementedException();
+            return GetAll(count, page).ToArrayAsync();
         }
 
-        public Task SaveAsync(Celeb celeb)
+        public async Task SaveAsync(Celeb celeb)
         {
-            throw new NotImplementedException();
+
+            if (celeb.Id == default(int))
+            {
+                db.Celebs.Add(celeb);
+                db.Entry(celeb).State = EntityState.Added;
+            }
+            else
+            {
+                db.Entry(celeb).State = EntityState.Modified;
+            }
+
+            await db.SaveChangesAsync();
+            //var isNew = recipe.Id == default(long);
+
+            //_context.Entry(recipe).State = isNew ? EntityState.Added : EntityState.Modified;
+
+            //await _context.SaveChangesAsync();
         }
 
         public Task DeleteAsync(int id)

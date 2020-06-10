@@ -4,4 +4,28 @@
     ViewData["Title"] = Model.IsNewOne ? "New eleb" : "Edit celeb";
 }
 
-<h2>Megjöttél!!!</h2>
+<h2>Megjöttél, hogy feltöltsél</h2>
+
+<form method="post" class="" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Celeb.Fullname" class="col-md-2 custom-control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Celeb.Fullname" class="form-control" />
+        </div>
+    </div>
+
+    <label asp-for="Celeb.Fullname" class="col-md-2 custom-control-label"></label>
+    <input type="file" asp-for="Image" />
+
+
+    <div class="form-group">
+        <div class="offset-md-2 col-md-10">
+            <button type="submit" class="btn btn-primary">Save</button>
+            @if (Model.IsNewOne)
+            {
+                <button type="submit" asp-page-handler="Delete" class="btn btn-danger">Delete</button>
+            }
+        </div>
+    </div>
+
+</form>

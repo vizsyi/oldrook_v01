@@ -1,0 +1,9 @@
+﻿.celebrow {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid goldenrod;
+}
+
+.celebrow > div {
+    margin-left: 30px
+}

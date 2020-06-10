@@ -1,0 +1,22 @@
+﻿@page "{id}"
+@inject ICelebService CelebService
+@{
+    var id = int.Parse((string)RouteData.Values["id"]);
+    var celeb = await CelebService.FindAsync(id);
+
+    ViewData["Title"] = celeb.Fullname;
+}
+<h1>Celebs</h1>
+
+<a asp-page="/Admin/AddEditCeleb" asp-route-id="@id" class="btn btn-primary">Edit celeb</a>
+
+<hr />
+<div class="row recipe">
+    <div class="col-md-4">
+        <img class="img img-thumbnail" src="@celeb.GetInlineImageSrc()" />
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-7">
+        <h4>@celeb.Fullname</h4>
+    </div>
+</div>

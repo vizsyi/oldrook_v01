@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Oldrook.Services
 {
-    interface ICelebService
+    public interface ICelebService
     {
         Celeb Find(int id);
         Task<Celeb> FindAsync(int id);

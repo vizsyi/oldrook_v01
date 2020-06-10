@@ -1,6 +1,6 @@
-﻿using LyndaSignalR.Models;
-using LyndaSignalR.Services;
-using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.SignalR;
+using Oldrook.Models;
+using Oldrook.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;

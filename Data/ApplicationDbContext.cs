@@ -11,8 +11,7 @@ namespace Oldrook.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
-        {
-        }
+        { }
         /// <summary>
         /// Saját adattáblák
         /// </summary>

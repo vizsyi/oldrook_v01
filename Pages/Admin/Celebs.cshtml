@@ -1,5 +1,27 @@
 ﻿@page
+@inject ICelebService CelebService
+@{
+    var celebs = await CelebService.GetAllAsync();
+}
+
 <h1>Celebs</h1>
 
 <a asp-page="/Admin/AddEditCeleb" class="btn btn-primary">Add Celeb</a>
 
+<hr>
+
+<h3>Focisták:</h3>
+@foreach (var cel in celebs)
+{
+    <div class="row celebrow">
+        <img class="img img-thumbnail col-md-3" src="@cel.GetInlineImageSrc()" />
+        <div>
+            <h4><a asp-page="/Admin/Celeb_" asp-route-id="@cel.Id">@cel.Fullname</a></h4>
+            <p>Footballer</p>
+        </div>
+    </div>
+}
+
+@section Styles {
+    <link href="~/css/Admin.css" rel="stylesheet" />
+}
