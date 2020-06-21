@@ -6,11 +6,21 @@
 
 <h2>Megjöttél, hogy feltöltsél</h2>
 
+@if (!ModelState.IsValid)
+{
+    <div class="offset-2 col-md-10">
+        <h3 class="text-danger">Validation Errors</h3>
+        <div asp-validation-summary="All"></div>
+        <hr />
+    </div>
+}
+
 <form method="post" class="" enctype="multipart/form-data">
     <div class="form-group">
         <label asp-for="Celeb.Fullname" class="col-md-2 custom-control-label"></label>
         <div class="col-md-10">
             <input asp-for="Celeb.Fullname" class="form-control" />
+            <span asp-validation-for="Celeb.Fullname"></span>
         </div>
     </div>
 
