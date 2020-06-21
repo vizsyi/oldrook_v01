@@ -1,4 +1,3 @@
-C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\Oldrook.StaticWebAssets.xml
@@ -71,3 +70,5 @@ C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Oldrook.MvcAppli
 C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Celebs.cshtml.g.cs
 C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\AddEditCeleb.cshtml.g.cs
+C:\Users\Pisti apu\source\repos\Oldrook\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Celeb_.cshtml.g.cs
+C:\Users\Pisti apu\source\repos\Oldrook\bin\Debug\netcoreapp3.1\appsettings.Development.json

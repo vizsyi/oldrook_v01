@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Oldrook.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace Oldrook
 {
@@ -34,12 +35,19 @@ namespace Oldrook
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddRazorPages();
+            services.AddRazorPages()
+                .AddRazorPagesOptions(options =>
+                {
+                    options.Conventions.AuthorizeFolder("/Admin");
+                    //options.Conventions.AuthorizeFolder("/Account");
+                    //options.Conventions.AllowAnonymousToPage("/Account/Login");
+                });
             services.AddSignalR();
 
             //Authentication
             IConfigurationSection extAuthSection = Configuration.GetSection("ExternalAuth");
-            services.AddAuthentication()
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie()
                 .AddFacebook(facebookOptions =>
                 {
                     facebookOptions.AppId = extAuthSection["FacebookId"];
