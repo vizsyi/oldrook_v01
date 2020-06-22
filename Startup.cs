@@ -35,13 +35,13 @@ namespace Oldrook
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddRazorPages()
-                .AddRazorPagesOptions(options =>
-                {
-                    options.Conventions.AuthorizeFolder("/Admin");
-                    //options.Conventions.AuthorizeFolder("/Account");
-                    //options.Conventions.AllowAnonymousToPage("/Account/Login");
-                });
+            services.AddRazorPages();
+                //.AddRazorPagesOptions(options =>
+                //{
+                //    options.Conventions.AuthorizeFolder("/Admin");
+                //    //options.Conventions.AuthorizeFolder("/Account");
+                //    //options.Conventions.AllowAnonymousToPage("/Account/Login");
+                //});
             services.AddSignalR();
 
             //Authentication
