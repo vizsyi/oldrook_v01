@@ -24,14 +24,15 @@
         </div>
     </div>
 
-    <label asp-for="Celeb.Fullname" class="col-md-2 custom-control-label"></label>
+    <label asp-for="Celeb.Image" class="col-md-2 custom-control-label"></label>
     <input type="file" asp-for="Image" />
 
-
+    <hr />
     <div class="form-group">
         <div class="offset-md-2 col-md-10">
+            <a asp-page="/Admin/Celeb_" asp-route-id="@Model.Id" class="btn btn-secondary">Back</a>
             <button type="submit" class="btn btn-primary">Save</button>
-            @if (Model.IsNewOne)
+            @if (!Model.IsNewOne)
             {
                 <button type="submit" asp-page-handler="Delete" class="btn btn-danger">Delete</button>
             }
