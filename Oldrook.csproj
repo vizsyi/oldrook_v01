@@ -5,6 +5,13 @@
     <UserSecretsId>aspnet-Oldrook-3D866C2E-CDAD-4DDC-89BF-B568847504DF</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20200608163801_addCelebTable.cs" />
+    <Compile Remove="Data\Migrations\20200608163801_addCelebTable.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200621220748_addIndex.cs" />
+    <Compile Remove="Data\Migrations\20200621220748_addIndex.Designer.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="AspNet.Security.OAuth.Instagram" Version="3.1.1" />

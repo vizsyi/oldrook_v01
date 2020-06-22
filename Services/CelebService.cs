@@ -52,7 +52,9 @@ namespace Oldrook.Services
             //var isNew = recipe.Id == default(long);
 
             //_context.Entry(recipe).State = isNew ? EntityState.Added : EntityState.Modified;
-
+            
+            //ModelState.Clear();
+            //TryValidateModel(celeb);
             //await _context.SaveChangesAsync();
         }
 

@@ -16,13 +16,17 @@ namespace Oldrook.Models
         public string Fullname { get; set; }
 
         [Required]
+        public Guid PId { get; set; } = Guid.NewGuid();
+
+        [Required]
         [Range(0, 4)]
         public byte Sex { get; set; }
 
-        public Celeb BestFriend { get; set; }
+        [Required]
+        public Boolean Ready { get; set; }
 
-        //[Required]
-        //public Guid PId { get; set; }
+
+        public Celeb BestFriend { get; set; }
 
         #region Image
 

@@ -14,7 +14,9 @@ namespace Oldrook.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Fullname = table.Column<string>(maxLength: 48, nullable: false),
+                    PId = table.Column<Guid>(nullable: false),
                     Sex = table.Column<byte>(nullable: false),
+                    Ready = table.Column<bool>(nullable: false),
                     BestFriendId = table.Column<int>(nullable: true),
                     Image = table.Column<byte[]>(nullable: true),
                     ContentType = table.Column<string>(nullable: true)

@@ -17,5 +17,13 @@ namespace Oldrook.Data
         /// </summary>
         public DbSet<Celeb> Celebs { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder mBuilder)
+        {
+            base.OnModelCreating(mBuilder);
+            mBuilder.Entity<Celeb>()
+                .HasIndex(b => b.PId)
+                .IsUnique();
+        }
+
     }
 }

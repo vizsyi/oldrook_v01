@@ -10,8 +10,8 @@ using Oldrook.Data;
 namespace Oldrook.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200608163801_addCelebTable")]
-    partial class addCelebTable
+    [Migration("20200621221057_addIndex")]
+    partial class addIndex
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -242,12 +242,21 @@ namespace Oldrook.Data.Migrations
                     b.Property<byte[]>("Image")
                         .HasColumnType("varbinary(max)");
 
+                    b.Property<Guid>("PId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Ready")
+                        .HasColumnType("bit");
+
                     b.Property<byte>("Sex")
                         .HasColumnType("tinyint");
 
                     b.HasKey("Id");
 
                     b.HasIndex("BestFriendId");
+
+                    b.HasIndex("PId")
+                        .IsUnique();
 
                     b.ToTable("Celebs");
                 });
